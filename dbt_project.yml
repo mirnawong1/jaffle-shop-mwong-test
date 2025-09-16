@@ -5,7 +5,7 @@ version: "3.0.0"
 require-dbt-version: ">=1.7.1"
 
 dbt-cloud:
-  project-id: 351639
+  project-id: 44964
 profile: snowflake #Put your profile name here
 
 model-paths: ["models"]
