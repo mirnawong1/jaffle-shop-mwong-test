@@ -19,9 +19,9 @@ models:
         description: The sum of all the pre-tax subtotals of every order a customer has placed.
       - name: lifetime_spend
         description: The sum of all the order totals (including tax) that a customer has ever placed.
-      - name: customer_type
+      - name: customer_type 
         description: Options are 'new' or 'returning', indicating if a customer has ordered more than once or has only placed their first order to date.
-        tests:
+        tests: 
           - accepted_values:
               arguments:
                 values: ["new", "returning"]

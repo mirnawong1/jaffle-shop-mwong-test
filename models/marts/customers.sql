@@ -16,8 +16,10 @@ order_items_table as (
 
     select * from {{ ref('order_items') }}
 
-),
+),/*  */
+\
 
+å/*  */
 order_summary as (
 
     select

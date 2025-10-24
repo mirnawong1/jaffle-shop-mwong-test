@@ -1,0 +1,20 @@
+version: 2
+
+snapshots:
+  - name: customers_snapshot
+    description: "Santi's customer history"
+    relation: ref('customers')
+    config:
+      strategy: timestamp
+      unique_key: customer_id
+      updated_at: last_ordered_at
+      schema: analytics
+
+  - name: orders_snapshot
+    description: "Santi's order history"
+    relation: ref('orders')
+    config:
+      strategy: timestamp
+      unique_key: order_id
+      updated_at: ordered_at        
+      schema: analytics
