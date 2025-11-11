@@ -2,10 +2,11 @@ config-version: 2
 
 name: "jaffle_shop"
 version: "3.0.0"
-require-dbt-version: ">=1.7.1"
+require-dbt-version: ">=1.9.0,<3.0.0"
+
 
 dbt-cloud:
-  project-id: 44964
+  project-id: 283328
 profile: snowflake #Put your profile name here
 
 model-paths: ["models"]
@@ -14,6 +15,7 @@ test-paths: ["tests"]
 seed-paths: ["jaffle-data"]
 macro-paths: ["macros"]
 snapshot-paths: ["snapshots"]
+function-paths: ["functions"]
 clean-targets:
   - "target"
   - "dbt_packages"
@@ -33,3 +35,4 @@ models:
       +materialized: view
     marts:
       +materialized: table
+
